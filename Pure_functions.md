@@ -37,3 +37,20 @@ This is not pure function as it is dependent on external tax variable , if someh
 4. DOM query/manipulation
 5. Math.random()
 6. Getting the current time
+
+`Object.setPrototypeOf()`
+
+- The Object.setPrototypeOf() static method sets the prototype (i.e., the internal [[Prototype]] property) of a specified object to another object or null.
+
+```
+const obj = {};
+  const parent = { foo: 'bar' };
+
+console.log(obj.foo);
+// Expected output: undefined
+
+Object.setPrototypeOf(obj, parent);
+
+console.log(obj.foo);
+// Expected output: "bar"
+```
