@@ -108,11 +108,12 @@ Object.defineProperty(user,"name",{
 })
 
 
-user.name="hello";
+
 
 Object.defineProperty(user,"name",{
     writable:true
 })
+user.name="hello";
 console.log(Object.getOwnPropertyDescriptor(user,"name"))
 console.log(user.name);
 
@@ -252,7 +253,17 @@ console.log(modifiedName)
 `Immediately Invoked function expression`
 
 - Functions that are executed as soon as they are mounted , these functions are known as IIFE.
-  (function (){
+  let x=(function (a,b){
+    var c;
+    add:function(){
+
+    },
+    sub: function(){
+
+    }
+    return {
+      add,sub,c
+    }
   logic
   })()
 
@@ -267,7 +278,7 @@ var myFunc = function() { return "GeeksforGeeks"; };
 !function() { return "GeeksforGeeks"; };
 
 // Creating Function Expression Using Parentheses.
-(function() { return "GeeksforGeeks"; });
+let x=(function() { return "GeeksforGeeks"; });
 
 - IIFE have there own function scope i.e. variable you declare in the function expression will not be available outside the function.
 - Similarly to other functions IIFEs can also be named or anonymous, but even if an IIFE does have a name it is impossible to refer/invoke it.
