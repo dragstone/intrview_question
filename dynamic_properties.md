@@ -72,3 +72,4 @@ console.log(obj)
 //   ageIsMoreThan5: true
 // }
 ```
+
